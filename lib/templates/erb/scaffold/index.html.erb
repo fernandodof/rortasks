@@ -14,7 +14,11 @@
 
   <tbody>
     <%% @<%= plural_table_name %>.each do |<%= singular_table_name %>| %>
-      <tr>
+      <% if singular_table_name == 'bug' || singular_table_name == 'issue' || singular_table_name == 'product' || singular_table_name == 'campaign' -%>
+        <tr class="w3-hover-green">
+      <% else -%>
+        <tr>
+      <% end -%>
 <% attributes.reject(&:password_digest?).each do |attribute| -%>
         <td><%%= <%= singular_table_name %>.<%= attribute.name %> %></td>
 <% end -%>

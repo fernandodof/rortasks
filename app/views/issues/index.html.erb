@@ -27,8 +27,8 @@
 
   <tbody>
     <% @issues.each do |issue| %>
-      <tr>
-        <td><%= issue.code %></td>
+              <tr class="w3-hover-green">
+              <td><%= issue.code %></td>
         <td><%= issue.project %></td>
         <td><%= issue.issuetype %></td>
         <td><%= issue.summary %></td>
